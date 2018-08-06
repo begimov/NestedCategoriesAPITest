@@ -1,0 +1,14 @@
+{
+    "name": "begimov/mvc-eframe-work",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app"
+        }
+    },
+    "description": "",
+    "require": {
+        "league/route": "^3.1",
+        "zendframework/zend-diactoros": "^1.8",
+        "illuminate/database": "^5.6"
+    }
+}

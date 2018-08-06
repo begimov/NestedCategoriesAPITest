@@ -1,0 +1,23 @@
+{% extends 'layouts/app.twig' %}
+
+{% block content %}
+    <div class="row mt-5">
+        <div class="col">
+            {% for user in users %}
+                <p>
+                    {{ user.id }} - {{ user.name }} - {{ user.email }}
+                    <ul>
+                        {% for topic in user.topics %}
+                            <li>{{ topic.name }}</li>
+                            <ul>
+                                {% for post in topic.posts %}
+                                    <li>{{ post.name }} - {{ post.user.name }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endfor %}
+                    </ul>
+                </p>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
