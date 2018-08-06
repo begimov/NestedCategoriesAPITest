@@ -6,4 +6,6 @@ $capsule->schema()->create('products', function ($table) {
 
     $table->increments('id');
 
+    $table->string('name');
+
 });
