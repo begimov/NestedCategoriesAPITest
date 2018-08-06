@@ -15,6 +15,11 @@ abstract class EloquentRepositoryAbstract implements RepositoryInterface, Criter
         $this->entity = $this->resolveEntity();
     }
 
+    public function find()
+    {
+        //
+    }
+
     public function withCriteria(array $criteria)
     {
         foreach ($criteria as $criterion) {
