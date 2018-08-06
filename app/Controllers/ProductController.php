@@ -6,10 +6,11 @@ class ProductController
 {
     public function show($request, $response, array $args)
     {
-        return $response->withPayload([
-            'data' => [
-                'data' => $args
-            ]
-        ]);
+        $data = \Spatie\Fractalistic\Fractal::create()
+            ->collection(\App\Models\Product::all())
+            ->transformWith(new \App\Transformers\ProductTransformer)
+            ->toArray();
+
+        return $response->withPayload($data);
     }
 }

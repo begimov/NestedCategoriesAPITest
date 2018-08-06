@@ -10,6 +10,7 @@ class ProductTransformer extends \League\Fractal\TransformerAbstract
     {
         return [
             'id' => $product->id,
+            'name' => $product->name,
         ];
     }
 }
